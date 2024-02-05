@@ -1,0 +1,34 @@
+<h1>Hello from Decorators 🙌</h1>
+<h3>Let me show you whats this element can do</h3>
+<hr />
+
+<section>
+  @for (item of options; track item){
+  <div class="row">
+    <div id="options">
+      <div class="margin">
+        <input
+          type="checkbox"
+          [id]="item.name"
+          name="action"
+          [value]="item.name"
+          (click)="action(item)"
+          [checked]="item.active"
+        />
+        <label for="{{item.name}}">{{item.name| titlecase}}</label>
+      </div>
+    </div>
+
+    @if(item.active){
+    <div id="actions">
+      @for(action of item.actions; track action){
+      <p>{{action}}</p>
+      }
+    </div>
+    }
+  </div>
+
+  } @empty{
+  <li>Nothing to see here</li>
+  }
+</section>
