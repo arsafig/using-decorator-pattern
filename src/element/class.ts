@@ -1,6 +1,6 @@
-import { Element } from './interface';
+import { BaseElement } from "./interface";
 
-export class BaseElementComponent implements Element {
+export class BaseElementComponent implements BaseElement {
   lookAround(): string {
     return "i'm looking Around";
   }

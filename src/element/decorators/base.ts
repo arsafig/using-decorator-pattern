@@ -1,9 +1,9 @@
-import { Element } from '../interface';
+import { BaseElement } from "../interface";
 
-export class ElementDecorator implements Element {
-  protected component: Element;
+export class ElementDecorator implements BaseElement {
+  protected component: BaseElement;
 
-  constructor(component: Element) {
+  constructor(component: BaseElement) {
     this.component = component;
   }
 
